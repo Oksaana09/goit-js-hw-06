@@ -3,7 +3,7 @@ const reactionText = {
     nameLabel: document.querySelector('#name-output'),
     }
 reactionText.input.addEventListener('input', print);
- 
+
 function print (event) {
-event.currentTarget.value === '' ? reactionText.nameLabel.textContent = 'Anonymous' : reactionText.nameLabel.textContent = event.currentTarget.value;
+event.currentTarget.value.trim() === '' ? reactionText.nameLabel.textContent = 'Anonymous' : reactionText.nameLabel.textContent = event.currentTarget.value.trim();
 };
